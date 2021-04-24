@@ -4,7 +4,9 @@
   "description": "Tic tac toe game",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && webpack --mode development",
+    "start:development": "webpack serve"
   },
   "author": "Arturas Solncevas",
   "license": "ISC",
