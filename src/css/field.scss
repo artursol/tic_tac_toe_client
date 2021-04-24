@@ -1,0 +1,18 @@
+.field {
+  width: 125px;
+  height: 125px;
+  background: red;
+  border-radius: 5%;
+  background: #ffe0e0;
+  margin: 3px;
+  cursor: pointer;
+
+  &.touched {
+    &.O {
+      background: blue;
+    }
+    &.X {
+      background: red;
+    }
+  }
+}

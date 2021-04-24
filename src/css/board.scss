@@ -1,0 +1,16 @@
+#board {
+  background: #f8aaaa;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 10px solid #f8aaaa;
+  border-radius: 5%;
+}
+
+.row {
+  display: flex;
+  background: blue;
+  justify-content: center;
+  background: #f8aaaa;
+}
