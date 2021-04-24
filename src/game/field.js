@@ -1,4 +1,7 @@
 import $ from 'jquery';
+import uiHelper from '../helpers/ui-helper';
+
+const { domElements } = uiHelper;
 
 class Field {
   constructor(position, gameContext, options) {
@@ -25,6 +28,8 @@ class Field {
       this.touched = true;
       this.type = this.gameContext.actionType;
       this.domElement.addClass(`touched ${this.type}`);
+      this.domElement.append(this.type === 'X' ? domElements.x.clone() : domElements.o.clone());
+
       this.gameContext.update({
         type: this.type,
         position: this.position,

@@ -30,6 +30,19 @@ const uiHelper = {
     }
     $('body #game-text').html(text);
   },
+
+  domElements: {
+    x: $(
+      '<svg width="100" height="100" viewbox="0 0 40 40">'
+        + '<path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"/>'
+        + '</svg>',
+    ),
+    o: $(
+      '<svg width="100" height="100" fill="transparent">'
+        + '<circle cx="50" cy="50" r="32" stroke="#a26c6c" stroke-width="10"></circle>'
+        + '</svg>',
+    ),
+  },
 };
 
 export default uiHelper;

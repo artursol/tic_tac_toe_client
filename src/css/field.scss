@@ -6,13 +6,14 @@
   background: #ffe0e0;
   margin: 3px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.touched {
     &.O {
-      background: blue;
     }
     &.X {
-      background: red;
     }
   }
 }
