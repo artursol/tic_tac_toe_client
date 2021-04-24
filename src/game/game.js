@@ -8,9 +8,17 @@ class Game {
       contextOptions,
       fieldOptions,
     } = options;
+
+    boardOptions.fieldOptions = fieldOptions;
+    contextOptions.boardSize = boardOptions.size;
+
+    this.gameContext = new GameContext(contextOptions);
+    this.board = new Board(el, this.gameContext, boardOptions);
   }
 
   reset() {
+    this.gameContext.reset();
+    this.board.reset();
   }
 }
 

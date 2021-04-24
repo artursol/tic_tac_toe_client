@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import '../css/field.scss';
 
 class Field {
   constructor(position, gameContext, options) {
