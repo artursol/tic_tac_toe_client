@@ -38,7 +38,7 @@ const config = {
   mode: environment,
   devServer: {
     contentBase: outputPath,
-    port: 5000,
+    port: 4000,
   },
 };
 
