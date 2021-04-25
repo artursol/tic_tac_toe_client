@@ -11,5 +11,10 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'class-methods-use-this': 'off',
+    'no-use-before-define': 'off',
+    'no-param-reassign': 'off',
+    'no-plusplus': 'off',
+    camelcase: 'off',
   },
 };

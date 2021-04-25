@@ -7,7 +7,7 @@ export const onStart = async (gameContext) => {
   const response = await apiClient.createGame({
     boardSize: gameContext.boardSize,
     status: gameContext.statusText,
-  });
+  }).catch(() => { uiHelper.showReload(); });
 
   const { data: { id, log: { created_at, message } } } = response;
   gameContext.gameId = id;
@@ -20,7 +20,8 @@ export const onClick = async (moveNumber, moveType, gameId, position) => {
     type: moveType,
     position,
     gameId,
-  });
+  }).catch(() => { uiHelper.showReload(); });
+
   const { data: { log: { created_at, message } } } = response;
   uiHelper.addLog(created_at, message);
 };
@@ -32,7 +33,8 @@ export const onReset = async (gameContext) => {
     const response = await apiClient.updateGameStatus({
       id: gameId,
       status: 'stopped',
-    });
+    }).catch(() => { uiHelper.showReload(); });
+
     const { data: { log: { created_at, message } } } = response;
     uiHelper.addLog(created_at, message);
   }
@@ -45,10 +47,10 @@ export const onUpdate = async (gameContext) => {
   if ([0, 2, 3].includes(status)) {
     const response = await apiClient.updateGameStatus({
       id: gameId, status: gameContext.statusText(),
-    });
+    }).catch(() => { uiHelper.showReload(); });
+
     const { data: { log: { created_at, message } } } = response;
     uiHelper.addLog(created_at, message);
   }
-
   uiHelper.setGameText(status, actionType);
 };
