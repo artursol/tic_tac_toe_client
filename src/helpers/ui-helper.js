@@ -1,8 +1,10 @@
 import $ from 'jquery';
+import moment from 'moment';
 
 const uiHelper = {
-  addLog: (dateTime, message) => {
-    $('#log').prepend(`</br>${message}`);
+  addLog: (time, message) => {
+    const formatted = moment.utc(time).local().format('YYYY-MM-DD HH:mm:ss');
+    $('#log').prepend(`</br>${formatted} | ${message}`);
   },
 
   setGameText: (status, actionType) => {
@@ -29,6 +31,10 @@ const uiHelper = {
       }
     }
     $('body #game-text').html(text);
+  },
+
+  showReload: () => {
+    alert('Can not connect to API, please refresh browser');
   },
 
   domElements: {
