@@ -6,10 +6,9 @@ Interactive sigle session tic tac toe client that communicates with [Tic tac toe
 
 ## Prerequisites
 
-[Node.js](https://nodejs.org/en/) v12.16.2
+- [Node.js](https://nodejs.org/en/) v12.16.2
 
-[Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
-
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 
 ## Installation
 Setup [Tic tac toe API](https://github.com/arturassolncevas/tic_tac_toe_api) 
@@ -32,6 +31,13 @@ yarn build
 yarn start:production
 ```
 Open in browser: 127.0.0.1:4000
+
+## Testing
+Testing UI includes combining Client and API projects together  and is yet to be implemented with the following tools:
+- [Cucumber](https://github.com/cucumber/cucumber-js)
+- [Puppeteer](https://github.com/puppeteer/puppeteer)
+- [Test blueprint](https://github.com/patheard/cucumber-puppeteer)
+
 ## Docker
 Build image (package install warnings will be resolved in next upcoming version)
 ```bash
