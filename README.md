@@ -1,6 +1,6 @@
 # Tic-tac-toe client
 
-Interactive sigle session tic-tac-toe client that communicates with [Tic-tac-toe API](https://github.com/arturassolncevas/tic_tac_toe_api)
+Interactive single session tic-tac-toe client that communicates with [Tic-tac-toe API](https://github.com/arturassolncevas/tic_tac_toe_api)
 
 ![alt text](https://i.ibb.co/V3zBX89/2021-04-25-17-31.png)
 
